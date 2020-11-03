@@ -17,8 +17,8 @@
         </tr>
         <tr>
             <td>请输入口令：</td>
-            更改更改jk
-            <td><input type="password" name="password"></td>
+
+            <td><input type="password" name="password"/></td>
         </tr>
         <tr>
             <td colspan="2" align="center">

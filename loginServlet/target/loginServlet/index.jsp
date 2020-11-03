@@ -8,7 +8,8 @@
 </head>
 <body>
 <h1 align="center">欢迎登录！</h1>
-<form action="login/myweb/jid" method="get">
+<%--<form action="login/myweb/jid" method="get">--%>
+<form action="\loginServlet\login/myweb/jid" method="get">
     <table align="center">
         <tr>
             <td>请输入用户名：</td>
@@ -16,7 +17,8 @@
         </tr>
         <tr>
             <td>请输入口令：</td>
-            <td><input type="password" name="password"></td>
+            更改更改jk
+            <td><input type="password" name="password"/></td>
         </tr>
         <tr>
             <td colspan="2" align="center">
