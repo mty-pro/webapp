@@ -9,7 +9,7 @@
 <body>
 <h1 align="center">欢迎登录！</h1>
 <%--<form action="login/myweb/jid" method="get">--%>
-<form action="\loginServlet\login/myweb/jid" method="get">
+<form action="login" method="get">
     <table align="center">
         <tr>
             <td>请输入用户名：</td>
