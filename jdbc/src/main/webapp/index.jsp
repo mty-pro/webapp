@@ -25,6 +25,10 @@
                     String NAME = rst.getString(2);
                     String GRADE = rst.getString(3);
                     int SCORE = rst.getInt(4);
+                    response.getWriter().print(ID + " ");
+                    response.getWriter().print(NAME + " ");
+                    response.getWriter().print(GRADE + " ");
+                    response.getWriter().println(SCORE);
                     System.out.println(ID);
                     System.out.println(NAME);
                     System.out.println(GRADE);
