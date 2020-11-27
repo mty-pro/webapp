@@ -22,6 +22,7 @@ public class MyBatisUtils {
 
     }
     public static SqlSession getSqlSession() {
+        //重量级对象       整个项目中有一个即可     从连接池中获取connection连接
         SqlSession sqlSession = null;
         if(factory != null) {
             sqlSession = factory.openSession();

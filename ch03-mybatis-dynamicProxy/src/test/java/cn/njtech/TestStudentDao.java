@@ -31,4 +31,13 @@ public class TestStudentDao {
         System.out.println("添加对象的数量：" + num);
         sqlSession.close();
     }
+
+    @Test
+    public void testSelectStudentById() {
+        SqlSession sqlSession = MyBatisUtils.getSqlSession();
+        StudentDao dao = sqlSession.getMapper(StudentDao.class);
+        Student student = dao.selectStudentById(1);
+        System.out.println("student=" + student);
+        sqlSession.close();
+    }
 }

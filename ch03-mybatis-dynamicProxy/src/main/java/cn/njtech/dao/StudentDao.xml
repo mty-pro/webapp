@@ -6,9 +6,20 @@
     <select id="selectStudents" resultType="cn.njtech.domain.Student">
         select id, name, age from student order by id
     </select>
+
+
+<!--    只有一个参数时，参数名称（即占位符）可以任意....-->
+    <select id="selectStudentById" parameterType="java.lang.Integer" resultType="cn.njtech.domain.Student">
+
+        select id, name, age from student where id=#{studentId}
+    </select>
+<!--    select id, name, age from student where id=#{studentId}-->
+<!--    select id, name, age from student where id=#{id}-->
+<!--    占位符名称可以任意，参数类型可以用类型的全限定名称也可以用mybatis中的别名也可以不写-->
+<!--    <select id="selectStudentById" parameterType="int" resultType="cn.njtech.domain.Student">-->
+<!--        select id, name, age from student where id=#{studentId}-->
+<!--    </select>-->
     <insert id="insertStudent">
         insert into student values (#{id}, #{name}, #{age})
     </insert>
-    <delete id=""></delete>
-    <update id=""></update>
 </mapper>

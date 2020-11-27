@@ -4,12 +4,14 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 
-    <properties>
-        <property name="driver" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost:3306/stu"/>
-        <property name="username" value="root"/>
-        <property name="password" value="root"/>
-    </properties>
+<!--    <properties>-->
+<!--        <property name="driver" value="com.mysql.jdbc.Driver"/>-->
+<!--        <property name="url" value="jdbc:mysql://localhost:3306/stu"/>-->
+<!--        <property name="username" value="root"/>-->
+<!--        <property name="password" value="root"/>-->
+<!--    </properties>-->
+
+    <properties resource="db.properties"/>
 
     <settings>
         <setting name="logImpl" value="STDOUT_LOGGING"/>
@@ -19,11 +21,17 @@
         <environment id="development">
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
-                <property name="driver" value="com.mysql.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql://localhost:3306/stu"/>
-<!--                <property name="url" value="jdbc:mysql://localhost:3306/stu?useSSL=false"/>-->
-                <property name="username" value="root"/>
-                <property name="password" value="root"/>
+<!--                <property name="driver" value="com.mysql.jdbc.Driver"/>-->
+<!--                <property name="url" value="jdbc:mysql://localhost:3306/stu"/>-->
+<!--&lt;!&ndash;                <property name="url" value="jdbc:mysql://localhost:3306/stu?useSSL=false"/>&ndash;&gt;-->
+<!--                <property name="username" value="root"/>-->
+<!--                <property name="password" value="root"/>-->
+<!--                这里使用${}的形式仍然需要用引号！！!-->
+                <property name="driver" value="${jdbc.mysql.driver}"/>
+                <property name="url" value="${jdbc.mysql.url}"/>
+                <!--                <property name="url" value="jdbc:mysql://localhost:3306/stu?useSSL=false"/>-->
+                <property name="username" value="${jdbc.mysql.user}"/>
+                <property name="password" value="${jdbc.mysql.password}"/>
             </dataSource>
         </environment>
     </environments>
